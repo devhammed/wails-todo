@@ -1,11 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import 'core-js/stable';
-import './index.css';
-import App from './App';
+import 'core-js/stable'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import * as Wails from '@wailsapp/runtime'
 
-import * as Wails from '@wailsapp/runtime';
+import App from './components/App'
 
 Wails.Init(() => {
-  ReactDOM.render(<App />, document.getElementById('app'));
-});
+  ReactDOM.render(<App />, document.getElementById('app'))
+})
