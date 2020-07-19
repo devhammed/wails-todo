@@ -72,7 +72,28 @@ func (t *Todos) WailsInit(runtime *wails.Runtime) error {
 	return nil
 }
 
+// All returns all the todos.
+func (t *Todos) All() []Todo {
+	return t.todos
+}
+
 // Add appends a new todo.
 func (t *Todos) Add(text string) {
 	t.todos = append(t.todos, Todo{ID: len(t.todos), Title: text, Completed: false})
+	t.saveTodos()
+}
+
+// Delete deletes a todo.
+func (t *Todos) Delete(id string) []Todo {
+	return t.todos
+}
+
+// ChangeTitle updates a todo's title.
+func (t *Todos) ChangeTitle(id string, title string) []Todo {
+	return t.todos
+}
+
+// ToggleCompleted toggles a todo's completed.
+func (t *Todos) ToggleCompleted(id string) []Todo {
+	return t.todos
 }

@@ -11,12 +11,13 @@ func main() {
 	js := mewn.String("./frontend/build/static/js/main.js")
 	css := mewn.String("./frontend/build/static/css/main.css")
 	app := wails.CreateApp(&wails.AppConfig{
-		Width:  1024,
-		Height: 768,
-		Title:  "Wails Todo",
-		JS:     js,
-		CSS:    css,
-		Colour: "#131313",
+		Width:     600,
+		Height:    600,
+		Title:     "Wails Todo",
+		JS:        js,
+		CSS:       css,
+		Resizable: true,
+		Colour:    "#f1f1f1",
 	})
 
 	app.Bind(models.NewTodos())
