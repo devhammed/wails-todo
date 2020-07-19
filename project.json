@@ -1,0 +1,22 @@
+{
+  "name": "Wails Todo",
+  "description": "Todo app with Wails and React.",
+  "author": {
+    "name": "Hammed Oyedele",
+    "email": "itz.harmid@gmail.com"
+  },
+  "version": "0.1.0",
+  "binaryname": "WailsTodo",
+  "frontend": {
+    "dir": "frontend",
+    "install": "npm install",
+    "build": "npm run build",
+    "bridge": "src",
+    "serve": "npm run start"
+  },
+  "WailsVersion": "",
+  "CrossCompile": false,
+  "Platform": "",
+  "Architecture": "",
+  "LdFlags": ""
+}

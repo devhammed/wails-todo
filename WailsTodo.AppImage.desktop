@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Wails Todo
+Exec=WailsTodo
+Icon=appicon
+Type=Application
+Categories=GTK;GNOME;Productivity;Development;
