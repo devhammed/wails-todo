@@ -46,6 +46,17 @@ func (t *Todos) loadTodos() {
 	t.todos = data
 }
 
+// saveTodos saves the todos to the flat-file database.
+func (t *Todos) saveTodos() {
+	todos, err := json.Marshal(t.todos)
+
+	if err != nil {
+		return
+	}
+
+	ioutil.WriteFile(t.db, []byte(todos), 0600)
+}
+
 // WailsInit initializes the wails runtime.
 func (t *Todos) WailsInit(runtime *wails.Runtime) error {
 	homedir, err := runtime.FileSystem.HomeDir()
